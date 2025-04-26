@@ -1,0 +1,35 @@
+.create-account {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  height: 90vh;
+  background-color: #f6f8f9;
+  padding: 20px;
+}
+
+.create-account h1 {
+  font-size: 2rem;
+  margin-bottom: 10px;
+}
+
+.create-account p {
+  color: #666;
+  margin-bottom: 30px;
+  text-align: center;
+  max-width: 300px;
+}
+
+.create-account button {
+  background-color: #6a0dad;
+  color: white;
+  border: none;
+  padding: 12px 24px;
+  border-radius: 6px;
+  cursor: pointer;
+  font-size: 1rem;
+}
+
+.create-account button:hover {
+  background-color: #5a0cab;
+}
