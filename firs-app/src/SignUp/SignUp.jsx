@@ -28,23 +28,36 @@ function SignUp(){
       <div className="signup-wrapper">
       <form className="signup-form" onSubmit={handleSubmit}>
         <h2>Create Account</h2>
-
-        <input name="fullName" placeholder="Full Name*" onChange={handleChange} required />
-        <input name="phoneNumber" placeholder="Phone Number*" onChange={handleChange} required />
-        <input name="email" placeholder="Email Address*" onChange={handleChange} required />
-        <input name="password" placeholder="Password*" type="password" onChange={handleChange} required />
-        <input name="companyName" placeholder="Company Name" onChange={handleChange} />
-
+      <div className="input-group">
+        <input type="text" className="floating-input" name="fullName" onChange={handleChange} required />
+        <label className="floating-label">Full Name*</label>
+      </div>
+      <div className="input-group">
+        <input type="number" className="floating-input" name="phoneNumber" onChange={handleChange} required />
+        <label className="floating-label">Phone Number*</label>
+      </div>
+      <div className="input-group">
+        <input type="email" className="floating-input" name="email" onChange={handleChange} required />
+        <label className="floating-label">Email Address*</label>
+      </div>
+      <div className="input-group">
+        <input className="floating-input" name="password" type="password" onChange={handleChange} required />
+        <label className="floating-label">Password*</label>
+      </div>
+      <div className="input-group">
+        <input type="text" className="floating-input" name="companyName" onChange={handleChange} />
+        <label className="floating-label">Company Name</label>
+      </div>
         <label>Are you an agency?</label>
         <div className="radio-group">
           <label><input type="radio" name="agency" value="yes" /> Yes</label>
           <label><input type="radio" name="agency" value="no" /> No</label>
         </div>
 
-        <button type="submit">Create Account</button>
-      </form>
-    </div>
-      );
+          <button type="submit">Create Account</button>
+        </form>
+      </div>
+    );
 }
 
 export default SignUp;

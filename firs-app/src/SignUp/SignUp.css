@@ -30,7 +30,7 @@
   color: #444;
 }
 
-.signup-form input{
+.signup-form input[type="text"]{
   width: 100%;
   padding: 10px;
   margin-bottom: 16px;
@@ -63,4 +63,40 @@
 
 .signup-form button:hover {
   background-color: #5c0ca3;
+}
+
+.input-group {
+  position: relative;
+  margin-bottom: 24px;
+}
+
+.floating-input {
+  width: 100%;
+  padding: 14px 12px 14px 12px;
+  border: 1px solid #ccc;
+  border-radius: 8px;
+  font-size: 1rem;
+  background: white;
+  box-sizing: border-box;
+}
+
+.floating-label {
+  position: absolute;
+  left: 14px;
+  top: 50%;
+  transform: translateY(-50%);
+  background: white;
+  padding: 0 4px;
+  color: #aaa;
+  font-size: 1rem;
+  pointer-events: none;
+  transition: 0.2s ease all;
+}
+
+.floating-input:focus + .floating-label,
+.floating-input:not(:placeholder-shown) + .floating-label {
+  top: 0;
+  transform: translateY(-50%) scale(0.85);
+  color: #6a0dad;
+  background: white;
 }

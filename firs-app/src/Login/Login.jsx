@@ -37,23 +37,29 @@ function Login() {
       <form className="login-form" onSubmit={handleSubmit}>
         <h1>Signin to Your PopX account</h1>
         <p>Lorem ipsum dolor sit amet, consectetur adipiscing slit,</p>
-        <input
-          type="email"
-          name="email"
-          placeholder="Email Address*"
-          value={formData.email}
-          onChange={handleChange}
-          required
-        />
+        <div className="input-group">
+          <input
+            type="email"
+            name="email"
+            className="floating-input"
+            value={formData.email}
+            onChange={handleChange}
+            required
+          />
+          <label className="floating-label">Email Address*</label>
+        </div>
 
+      <div className="input-group">
         <input
           type="password"
           name="password"
-          placeholder="Password*"
+          className="floating-input"
           value={formData.password}
           onChange={handleChange}
           required
         />
+        <label className="floating-label">Password*</label>
+      </div>
 
         <button type="submit">Login</button>
       </form>
